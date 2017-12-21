@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class fichePersoScript : MonoBehaviour {
 
 	public Text nameTxt, jobTxt, capAtkTxt, capArtTxt, capIntTxt;
+	public GameObject fichePerso;
 
-	public
 
 
 	// Use this for initialization
