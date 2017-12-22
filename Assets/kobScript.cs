@@ -20,6 +20,7 @@ public class kobScript : MonoBehaviour {
 
     public string job, name;
 
+    public bool locked = false; 
 
     public GameObject target;
     public GameObject currentRoom;
@@ -98,6 +99,11 @@ public class kobScript : MonoBehaviour {
 
 
         getRoom();
+
+        if (locked)
+        {
+            Camera.main.GetComponent<Transform>().localPosition = this.GetComponent<Transform>().localPosition + new Vector3(7,0,-20);
+        }
 
 	}
 
