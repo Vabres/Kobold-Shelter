@@ -14,7 +14,7 @@ public class kobScript : MonoBehaviour {
     public int Intel;
     public int Artisanat;
 
-    
+    public GameObject UIPerso;
 
 
 
@@ -43,6 +43,8 @@ public class kobScript : MonoBehaviour {
         Intel = 1;
         Atk = 2;
         Artisanat = 2;
+
+        name = "John Doe";
     
 	}
 	
@@ -226,6 +228,8 @@ public class kobScript : MonoBehaviour {
 
     void death()
     {
+        Destroy(UIPerso);
         Destroy(gameObject);
+        
     }
 }

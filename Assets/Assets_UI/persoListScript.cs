@@ -15,10 +15,12 @@ public class persoListScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        kob = perso.GetComponent<kobScript>();	
+        kob = perso.GetComponent<kobScript>();
+        fichePerso = GameObject.Find("fichePerso");
 	}
 
 	public void appui(){
+
 		fichePerso.GetComponent<fichePersoScript> ().affichage (perso);
 	
 	}
