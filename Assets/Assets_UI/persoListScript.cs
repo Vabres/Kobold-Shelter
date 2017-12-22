@@ -17,6 +17,7 @@ public class persoListScript : MonoBehaviour {
 	void Start () {
         kob = perso.GetComponent<kobScript>();
         fichePerso = GameObject.Find("fichePerso");
+		name = kob.name;
 	}
 
 	public void appui(){

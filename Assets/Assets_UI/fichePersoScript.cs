@@ -24,7 +24,7 @@ public class fichePersoScript : MonoBehaviour {
 		capIntTxt.text = kob.Intel.ToString();
         barreSommeil.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Sleep, barreSommeil.GetComponent<RectTransform>().sizeDelta.y);
         barreFaim.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Hunger, barreFaim.GetComponent<RectTransform>().sizeDelta.y);
-        barreVie.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.PV, barreVie.GetComponent<RectTransform>().sizeDelta.y);
+        barreVie.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.PV * 33, barreVie.GetComponent<RectTransform>().sizeDelta.y);
 		perso = g;
 		if (jobTxt.text == "warior") {
 			jobChoiceWar ();
@@ -44,12 +44,12 @@ public class fichePersoScript : MonoBehaviour {
 	public void jobChoiceWar(){
 		btnGat.SetActive (false);
 		btnWar.GetComponent<Button> ().enabled = false;
-		kob.job = "Warior";
+		kob.job = "warior";
 	}
 	public void jobChoiceGat() {
 		btnWar.SetActive (false);
 		btnGat.GetComponent<Button> ().enabled = false;
-		kob.job = "Gatherer";
+		kob.job = "gatherer";
 	}
 
 	public void masquage(){
@@ -63,6 +63,8 @@ public class fichePersoScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		barreSommeil.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Sleep, barreSommeil.GetComponent<RectTransform>().sizeDelta.y);
+		barreFaim.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Hunger, barreFaim.GetComponent<RectTransform>().sizeDelta.y);
+		barreVie.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.PV * 33, barreVie.GetComponent<RectTransform>().sizeDelta.y);
 	}
 }

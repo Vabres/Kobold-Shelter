@@ -45,7 +45,7 @@ public class AlertScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (capitan.startAlerte) {
+		if (capitan.startAlert) {
 			StartCoroutine (alerte ());
 		}
 	}
