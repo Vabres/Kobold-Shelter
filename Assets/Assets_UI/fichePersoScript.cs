@@ -11,23 +11,25 @@ public class fichePersoScript : MonoBehaviour {
 	public GameObject fichePerso, perso;
 	public Image barreFaim, barreVie, barreSommeil;
 	public GameObject btnWar, btnGat;
+	public kobScript kob;
 
 
 	public void affichage(GameObject g){
 		fichePerso.SetActive (true);
-		//nameTxt.text = g.nomduperso;
-		//jobTxt = g.jobduperso;
-		//capArtTxt = g.artduperso;
-		//capAtkTxt = g.atkduperso;
-		//capIntTxt = g.intduperso;
-		//barreSommeil.rectTransform.rect.width = g.sommeil;
-		//barreFaim.rectTransform.rect.width = g.faim;
-		//barreVie.rectTransform.rect.width = g.life;
+		kob = g.getComponents<kobScript> ();
+		nameTxt.text = kob.name;
+		jobTxt = kob.job;
+		capArtTxt = kob.Artisanat;
+		capAtkTxt = kob.Atk;
+		capIntTxt = kob.Intel;
+		barreSommeil.rectTransform.rect.width = kob.Sleep;
+		barreFaim.rectTransform.rect.width = kob.Hunger;
+		barreVie.rectTransform.rect.width = kob.PV;
 		perso = g;
-		/*if (g.job == "Warior") {
+		if (jobTxt == "Warior") {
 			jobChoiceWar ();
 		}
-		else if (g.job == "Gatherer") {
+		else if (jobTxt == "Gatherer") {
 			jobChoiceGat ();
 		} 
 		else {
@@ -36,18 +38,18 @@ public class fichePersoScript : MonoBehaviour {
 
 			btnWar.SetActive (true);
 			btnWar.GetComponent<Button> ().enabled = true;
-		}*/
+		}
 	}
 
 	public void jobChoiceWar(){
 		btnGat.SetActive (false);
 		btnWar.GetComponent<Button> ().enabled = false;
-		//perso.job = "Warior";
+		perso.job = "Warior";
 	}
 	public void jobChoiceGat() {
-		btnGat.SetActive (false);
-		btnWar.GetComponent<Button> ().enabled = false;
-		//perso.job = "Gatherer";
+		btnWar.SetActive (false);
+		btnGat.GetComponent<Button> ().enabled = false;
+		perso.job = "Gatherer";
 	}
 
 	public void masquage(){
