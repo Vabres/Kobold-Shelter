@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1428066586940638}
+  m_IsPrefabParent: 1
+--- !u!1 &1428066586940638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4004494892735036}
+  - component: {fileID: 114590735522563322}
+  m_Layer: 0
+  m_Name: Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4004494892735036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428066586940638}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.93, y: -3.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114590735522563322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428066586940638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e8877b04eddf44683232567fc55a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  millieuGauche: {fileID: 1799055025929034, guid: 6d2290def327aeb42ba5df8a59f964ec,
+    type: 2}
+  millieuDroit: {fileID: 1487832353172956, guid: 7ee24f36ec87dab40b97adc01d60675e,
+    type: 2}
+  basGauche: {fileID: 1192860254956954, guid: 92218975f1e14b84982af81b4de03be3, type: 2}
+  basDroit: {fileID: 1533937971159076, guid: c780fad26feefac499dd412f6723a5da, type: 2}
+  basMillieu: {fileID: 1611095835377318, guid: de2e2be500d77ad4385660d035006360, type: 2}
+  interieur: {fileID: 1841984308022236, guid: 062f54b807dde6b46895c4427f4db60a, type: 2}
+  BackGround: {fileID: 0}
+  BackGroundPrefab: {fileID: 1261931330661432, guid: 82287a229d08a5f4b8d06057b185d2b7,
+    type: 2}
+  isRssource: 0
+  isCraft: 0
+  isDorm: 0
+  isEntry: 0
+  leftConnexion: 0
+  rightConnexion: 0
