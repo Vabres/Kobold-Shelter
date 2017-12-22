@@ -92,3 +92,7 @@ MonoBehaviour:
   kobboldPrefab: {fileID: 1554868953333254, guid: a5e53ffce8a0ecf4bb03edab76a04de5,
     type: 2}
   kobbold: {fileID: 0}
+  UIPersoPrefab: {fileID: 1435730859502776, guid: c0cce0960fb89764a89eefd49efed8f1,
+    type: 2}
+  UIPerso: {fileID: 0}
+  UIParent: {fileID: 0}

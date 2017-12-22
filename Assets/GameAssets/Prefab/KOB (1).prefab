@@ -107,7 +107,8 @@ MonoBehaviour:
   Atk: 0
   Intel: 0
   Artisanat: 0
-  job: worker
+  UIPerso: {fileID: 0}
+  job: gatherer
   name: 
   target: {fileID: 0}
   currentRoom: {fileID: 0}

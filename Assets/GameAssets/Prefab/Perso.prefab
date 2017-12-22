@@ -221,8 +221,8 @@ MonoBehaviour:
   name: {fileID: 114073982886927516}
   wariorIcon: {fileID: 21300000, guid: dd5186df84ea83a4cbc780377e963b34, type: 3}
   gathererIcon: {fileID: 21300000, guid: 01a52588a34e97a4ebd41b79b29eae82, type: 3}
-  workerIcon: {fileID: 0}
-  icon: {fileID: 0}
+  workerIcon: {fileID: 21300000, guid: 259944317b6180e4aa197d4fd4aaf2db, type: 3}
+  icon: {fileID: 114358690949090510}
   nbDePerso: 0
   kob: {fileID: 0}
 --- !u!222 &222049123520308186
@@ -251,7 +251,7 @@ RectTransform:
   m_GameObject: {fileID: 1435730859502776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.93955684, y: 0.6607761, z: 0.66903514}
+  m_LocalScale: {x: 2, y: 1.2, z: 0.66903514}
   m_Children:
   - {fileID: 224557288183683042}
   - {fileID: 224702596775539904}
