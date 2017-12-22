@@ -26,10 +26,10 @@ public class fichePersoScript : MonoBehaviour {
         barreFaim.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Hunger, barreFaim.GetComponent<RectTransform>().sizeDelta.y);
         barreVie.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.PV, barreVie.GetComponent<RectTransform>().sizeDelta.y);
 		perso = g;
-		if (jobTxt.text == "Warior") {
+		if (jobTxt.text == "warior") {
 			jobChoiceWar ();
 		}
-		else if (jobTxt.text == "Gatherer") {
+		else if (jobTxt.text == "gatherer") {
 			jobChoiceGat ();
 		} 
 		else {
