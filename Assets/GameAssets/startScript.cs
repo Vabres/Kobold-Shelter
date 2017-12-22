@@ -23,7 +23,6 @@ public class startScript : MonoBehaviour
         sheltersetup[1, 0] = 2;
         sheltersetup[2, 0] = 3;
         sheltersetup[3, 0] = 4;
-        sheltersetup[4, 0] = 4;
         generateShelter();
 
     }
@@ -38,6 +37,7 @@ public class startScript : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
+
             for (int j = 0; j < 1; j++)
             {
 

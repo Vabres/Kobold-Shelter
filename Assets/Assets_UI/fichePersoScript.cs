@@ -39,6 +39,9 @@ public class fichePersoScript : MonoBehaviour {
 			btnWar.SetActive (true);
 			btnWar.GetComponent<Button> ().enabled = true;
 		}
+
+        kob.locked = true;
+
 	}
 
 	public void jobChoiceWar(){
@@ -54,7 +57,8 @@ public class fichePersoScript : MonoBehaviour {
 
 	public void masquage(){
 		fichePerso.SetActive (false);
-	}
+        kob.locked = false;
+    }
 
 	// Use this for initialization
 	void Start () {
