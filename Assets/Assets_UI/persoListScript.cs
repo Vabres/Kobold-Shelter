@@ -11,10 +11,11 @@ public class persoListScript : MonoBehaviour {
 	public Sprite wariorIcon, gathererIcon, workerIcon;
 	public Image icon;
 	public int nbDePerso = 0;
+    public kobScript kob;
 
 	// Use this for initialization
 	void Start () {
-			
+        kob = perso.GetComponent<kobScript>();	
 	}
 
 	public void appui(){
@@ -27,12 +28,12 @@ public class persoListScript : MonoBehaviour {
 	void Update () {
 
 
-		if (perso.job == "warior")
+		if (kob.job == "warior")
 			icon.sprite = wariorIcon;
-		if (perso.job == "gatherer") {
+		if (kob.job == "gatherer") {
 			icon.sprite = gathererIcon;
 		}
-		if (perso.job == "worker") {
+		if (kob.job == "worker") {
 			icon.sprite = workerIcon;
 		}
 	}

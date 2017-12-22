@@ -107,8 +107,10 @@ MonoBehaviour:
   Atk: 0
   Intel: 0
   Artisanat: 0
-  job: warrior
+  job: worker
+  name: 
   target: {fileID: 0}
+  currentRoom: {fileID: 0}
 --- !u!212 &212518908505339070
 SpriteRenderer:
   m_ObjectHideFlags: 1

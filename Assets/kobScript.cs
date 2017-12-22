@@ -60,7 +60,7 @@ public class kobScript : MonoBehaviour {
         }
 
 
-        if (sleepTime >= 8)
+        if (sleepTime >= 4)
         {
             Sleep--;
             sleepTime = 0;
@@ -70,7 +70,7 @@ public class kobScript : MonoBehaviour {
                 sleepDepravation();
             }
         }
-        if(hungerTime >= 4)
+        if(hungerTime >= 2)
         {
             Hunger--;
             hungerTime = 0;
@@ -204,7 +204,7 @@ public class kobScript : MonoBehaviour {
             }
             else if (job == "worker")
             {
-                //do stuff
+                target = GameObject.Find("Start").GetComponent<startScript>().findroom("food");
             }
         }
     }

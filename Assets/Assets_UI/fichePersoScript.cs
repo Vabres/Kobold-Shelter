@@ -16,20 +16,20 @@ public class fichePersoScript : MonoBehaviour {
 
 	public void affichage(GameObject g){
 		fichePerso.SetActive (true);
-		kob = g.getComponents<kobScript> ();
+		kob = g.GetComponent<kobScript>();
 		nameTxt.text = kob.name;
-		jobTxt = kob.job;
-		capArtTxt = kob.Artisanat;
-		capAtkTxt = kob.Atk;
-		capIntTxt = kob.Intel;
-		barreSommeil.rectTransform.rect.width = kob.Sleep;
-		barreFaim.rectTransform.rect.width = kob.Hunger;
-		barreVie.rectTransform.rect.width = kob.PV;
+		jobTxt.text = kob.job;
+		capArtTxt.text = kob.Artisanat.ToString();
+		capAtkTxt.text = kob.Atk.ToString();
+		capIntTxt.text = kob.Intel.ToString();
+        barreSommeil.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Sleep, barreSommeil.GetComponent<RectTransform>().sizeDelta.y);
+        barreFaim.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.Hunger, barreFaim.GetComponent<RectTransform>().sizeDelta.y);
+        barreVie.GetComponent<RectTransform>().sizeDelta = new Vector2((float)kob.PV, barreVie.GetComponent<RectTransform>().sizeDelta.y);
 		perso = g;
-		if (jobTxt == "Warior") {
+		if (jobTxt.text == "Warior") {
 			jobChoiceWar ();
 		}
-		else if (jobTxt == "Gatherer") {
+		else if (jobTxt.text == "Gatherer") {
 			jobChoiceGat ();
 		} 
 		else {
@@ -44,12 +44,12 @@ public class fichePersoScript : MonoBehaviour {
 	public void jobChoiceWar(){
 		btnGat.SetActive (false);
 		btnWar.GetComponent<Button> ().enabled = false;
-		perso.job = "Warior";
+		kob.job = "Warior";
 	}
 	public void jobChoiceGat() {
 		btnWar.SetActive (false);
 		btnGat.GetComponent<Button> ().enabled = false;
-		perso.job = "Gatherer";
+		kob.job = "Gatherer";
 	}
 
 	public void masquage(){

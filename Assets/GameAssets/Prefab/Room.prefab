@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4004494892735036}
   - component: {fileID: 114590735522563322}
+  - component: {fileID: 114691900901385534}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -62,9 +63,32 @@ MonoBehaviour:
   BackGround: {fileID: 0}
   BackGroundPrefab: {fileID: 1261931330661432, guid: 82287a229d08a5f4b8d06057b185d2b7,
     type: 2}
+  BackGroundPrefabRessources: {fileID: 1772736107262968, guid: 484ab48570f8ec1458d8b83b480f642b,
+    type: 2}
+  BackGroundPrefabCraft: {fileID: 1941896319857702, guid: b9cb38ccc2b2fbe4681fd807140a0319,
+    type: 2}
+  BackGroundPrefabDorm: {fileID: 1354926831482984, guid: f3502f2b5a24f6843bedc3fcd4620443,
+    type: 2}
+  BackGroundPrefabEntry: {fileID: 1261931330661432, guid: 82287a229d08a5f4b8d06057b185d2b7,
+    type: 2}
   isRssource: 0
   isCraft: 0
   isDorm: 0
   isEntry: 0
   leftConnexion: 0
   rightConnexion: 0
+--- !u!114 &114691900901385534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428066586940638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d6a558f1f8b20458433f5ed9002763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEntry: 0
+  kobboldPrefab: {fileID: 1554868953333254, guid: a5e53ffce8a0ecf4bb03edab76a04de5,
+    type: 2}
+  kobbold: {fileID: 0}
