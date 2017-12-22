@@ -102,7 +102,7 @@ public class kobScript : MonoBehaviour {
 
         if (locked)
         {
-            Camera.main.GetComponent<Transform>().localPosition = this.GetComponent<Transform>().localPosition + new Vector3(7,0,-20);
+            Camera.main.GetComponent<Transform>().localPosition = this.GetComponent<Transform>().localPosition + new Vector3(0,4,-20);
         }
 
 	}
