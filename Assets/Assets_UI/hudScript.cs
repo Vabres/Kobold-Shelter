@@ -8,18 +8,21 @@ public class hudScript : MonoBehaviour {
 
 	public Text meatTxt, ratsTxt, bonesTxt, leatherTxt;
 	public int meatInt = 0, ratsInt = 0, bonesInt = 0, leatherInt = 0;
+	public generalScript gen;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		gen = Camera.main.GetComponent<generalScript> ();
 		
 	}
+
+
 	// Update is called once per frame
 	void Update () {
-		meatTxt.text = meatInt + "";
-		ratsTxt.text = ratsInt + "";
-		bonesTxt.text = bonesInt + "";
-		leatherTxt.text = leatherInt + "";
+		meatTxt.text = gen.Viande + "";
+		ratsTxt.text = gen.Rats + "";
+		bonesTxt.text = gen.Os + "";
+		leatherTxt.text = gen.Cuir + "";
 	}
 }

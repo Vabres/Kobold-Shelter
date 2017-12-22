@@ -8,7 +8,7 @@ public class persoListScript : MonoBehaviour {
 
 	public GameObject perso, fichePerso;
 	public Text name;
-	public Sprite wariorIcon, gathererIcon;
+	public Sprite wariorIcon, gathererIcon, workerIcon;
 	public Image icon;
 	public int nbDePerso = 0;
 
@@ -27,10 +27,13 @@ public class persoListScript : MonoBehaviour {
 	void Update () {
 
 
-		/*if (perso.job == "Warior")
+		if (perso.job == "warior")
 			icon.sprite = wariorIcon;
-		if (perso.job == "Gatherer") {
+		if (perso.job == "gatherer") {
 			icon.sprite = gathererIcon;
-		}*/
+		}
+		if (perso.job == "worker") {
+			icon.sprite = workerIcon;
+		}
 	}
 }
