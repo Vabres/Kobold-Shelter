@@ -17,7 +17,7 @@ public class persoListScript : MonoBehaviour {
 	void Start () {
         kob = perso.GetComponent<kobScript>();
         fichePerso = GameObject.Find("fichePerso");
-		name = kob.name;
+		name.text = kob.name;
 	}
 
 	public void appui(){
@@ -31,7 +31,7 @@ public class persoListScript : MonoBehaviour {
 	void Update () {
 
 
-		if (kob.job == "warior")
+		if (kob.job == "warrior")
 			icon.sprite = wariorIcon;
 		if (kob.job == "gatherer") {
 			icon.sprite = gathererIcon;
