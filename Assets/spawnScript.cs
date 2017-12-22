@@ -12,7 +12,7 @@ public class spawnScript : MonoBehaviour {
     public GameObject UIParent;
 
 
-    float spawnTime = 30;
+    float spawnTime = 120;
     // Use this for initialization
     void Start () {
         if (this.GetComponent<RoomGenScript>().isEntry)
@@ -31,7 +31,7 @@ public class spawnScript : MonoBehaviour {
         if (isEntry)
         {
             spawnTime += Time.deltaTime;
-            if (spawnTime >= 30)
+            if (spawnTime >= 120)
             {
                 spawning();
                 spawnTime = 0;

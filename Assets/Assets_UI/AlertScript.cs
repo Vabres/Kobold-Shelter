@@ -9,7 +9,7 @@ public class AlertScript : MonoBehaviour {
 	public Image cadre, alertIcon2;
 	public GameObject alertNotif;
 	public bool startAlert = false, stopAlert = false;
-	public generalScript capitan;
+	public combatScript capitan;
 
 
 	IEnumerator alerte(){
@@ -40,12 +40,12 @@ public class AlertScript : MonoBehaviour {
 		cadre.enabled = false;
 		alertIcon2.enabled = false;
 		alertNotif.SetActive (false);
-		capitan = Camera.main.GetComponent<generalScript> ();
+		capitan = Camera.main.GetComponent<combatScript> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (capitan.startAlerte) {
+		if (capitan.startAlert) {
 			StartCoroutine (alerte ());
 		}
 	}
