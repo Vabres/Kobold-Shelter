@@ -13,6 +13,7 @@ public class RoomGenScript : MonoBehaviour {
     GameObject selectedPrefab;
     public GameObject BackGround;
     public GameObject BackGroundPrefab;
+    public GameObject BackGroundPrefabRessources, BackGroundPrefabCraft, BackGroundPrefabDorm, BackGroundPrefabEntry;
     public bool isRssource;
     public bool isCraft;
     public bool isDorm;
@@ -95,6 +96,24 @@ public class RoomGenScript : MonoBehaviour {
                 }
             }
         }
+
+        if (isCraft)
+        {
+            BackGroundPrefab = BackGroundPrefabCraft;
+        }
+        if (isDorm)
+        {
+            BackGroundPrefab = BackGroundPrefabDorm;
+        }
+        if (isEntry)
+        {
+            BackGroundPrefab = BackGroundPrefabEntry;
+        }
+        if (isRssource)
+        {
+            BackGroundPrefab = BackGroundPrefabRessources;
+        }
+
         BackGround = Instantiate(BackGroundPrefab);
         BackGround.GetComponent<Transform>().SetParent(this.GetComponent<Transform>());
         BackGround.GetComponent<Transform>().localPosition = new Vector3(4.5f, 1.5f , 10);

@@ -43,31 +43,31 @@ public class startScript : MonoBehaviour
                 shelterobj[i, j] = Instantiate(roomprefab);
                 switch (sheltersetup[i, j])
                 {
-                    case 0:
+                    case 0: //rien
                         shelterobj[i, j].GetComponent<RoomGenScript>().isCraft = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isDorm = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isRssource = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isEntry = false;
                         break;
-                    case 1:
+                    case 1: //entrée
                         shelterobj[i, j].GetComponent<RoomGenScript>().isCraft = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isDorm = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isRssource = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isEntry = true;
                         break;
-                    case 2:
+                    case 2: //food
                         shelterobj[i, j].GetComponent<RoomGenScript>().isCraft = true;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isDorm = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isRssource = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isEntry = false;
                         break;
-                    case 3:
+                    case 3: //dorm
                         shelterobj[i, j].GetComponent<RoomGenScript>().isCraft = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isDorm = true;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isRssource = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isEntry = false;
                         break;
-                    case 4:
+                    case 4: //ressources
                         shelterobj[i, j].GetComponent<RoomGenScript>().isCraft = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isDorm = false;
                         shelterobj[i, j].GetComponent<RoomGenScript>().isRssource = true;
@@ -94,24 +94,20 @@ public class startScript : MonoBehaviour
 
     public GameObject findroom(string tag)
     {
-        Debug.Log("hello");
+     
         if (tag == "entry")
         {
             for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 1; j++)
-                {
+                
 
-                    if (sheltersetup[i, j] == 1)
+                    if (sheltersetup[i, 0] == 1)
                     {
-                        return shelterobj[i, j];
-                    }
-                    else
-                    {
-                        return null;
+                     
+                        return shelterobj[i, 0];
                     }
 
-                }
+                
             }
         }
 
@@ -119,19 +115,12 @@ public class startScript : MonoBehaviour
         {
             for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 1; j++)
-                {
-
-                    if (sheltersetup[i, j] == 3)
+        
+                    if (sheltersetup[i, 0] == 3)
                     {
-                        return shelterobj[i, j];
+                        return shelterobj[i, 0];
                     }
-                    else
-                    {
-                        return null;
-                    }
-
-                }
+                
             }
         }
 
@@ -139,40 +128,27 @@ public class startScript : MonoBehaviour
         {
             for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 1; j++)
-                {
-
-                    if (sheltersetup[i, j] == 2)
+                    if (sheltersetup[i, 0] == 2)
                     {
-                        return shelterobj[i, j];
-                    }
-                    else
-                    {
-                        return null;
-                    }
-
-                }
+                        return shelterobj[i, 0];
+                    }                
             }
         }
 
         if (tag == "ressources")
         {
+
             for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 1; j++)
-                {
+              
+                   
+                    if (sheltersetup[i,0] == 4)
+                    {
 
-                    if (sheltersetup[i, j] == 4)
-                    {
-                        Debug.Log("cc");
-                        return shelterobj[i, j];
-                    }
-                    else
-                    {
-                        return null;
+                        return shelterobj[i, 0];
                     }
 
-                }
+                
             }
         }
 
